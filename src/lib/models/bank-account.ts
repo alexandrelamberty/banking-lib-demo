@@ -23,4 +23,9 @@ export abstract class BankAccount {
   public get balance(): number {
     return this._balance;
   }
+
+  deposit(amount: number): void {
+    if (amount < 0) throw Error('Deposit amount must be positive.');
+    this._balance = this._balance + amount;
+  }
 }

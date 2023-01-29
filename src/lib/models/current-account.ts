@@ -21,11 +21,6 @@ export class CurrentAccount extends BankAccount {
     return this._balance;
   }
 
-  deposit(amount: number): void {
-    if (amount <= 0) throw Error('Deposit amount must be positive.');
-    this._balance = this._balance + amount;
-  }
-
   withdrawal(amount: number): void {
     if (amount >= 0) {
       const withdrawalTransaction = this._balance - amount;
