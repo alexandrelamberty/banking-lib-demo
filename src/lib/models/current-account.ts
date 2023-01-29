@@ -17,10 +17,6 @@ export class CurrentAccount extends BankAccount {
     return this._creaditLine;
   }
 
-  public get balance(): number {
-    return this._balance;
-  }
-
   withdrawal(amount: number): void {
     if (amount >= 0) {
       const withdrawalTransaction = this._balance - amount;

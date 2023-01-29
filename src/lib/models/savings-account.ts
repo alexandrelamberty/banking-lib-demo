@@ -12,10 +12,6 @@ export class SavingsAccount extends BankAccount {
     return this._lastWithdrawal;
   }
 
-  public get balance(): number {
-    return this._balance;
-  }
-
   withdrawal(amount: number): void {
     if (amount >= 0) {
       const withdrawalTransaction = this._balance - amount;
