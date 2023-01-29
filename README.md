@@ -1,6 +1,6 @@
 # Bank Management Library Demo
 
-TypeScript library demo for school.
+TypeScript library package demo for school. This project was created with [typescript-starter](https://github.com/bitjson/typescript-starter)
 
 Read the docs at <https://alexandrelamberty.github.io/bank-management-library-demo/>
 
