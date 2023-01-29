@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Bank | @eevos/bank-management-demo</title>
-	<meta name="description" content="Documentation for @eevos/bank-management-demo">
+	<title>Bank | @eevos/bank-management-library-demo</title>
+	<meta name="description" content="Documentation for @eevos/bank-management-library-demo">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@eevos/bank-management-demo</a>
+					<a href="../index.html" class="title">@eevos/bank-management-library-demo</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -66,6 +66,13 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>A class representing a bank</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
@@ -97,6 +104,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bank.html#account" class="tsd-kind-icon">account</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bank.html#accountholdings" class="tsd-kind-icon">account<wbr>Holdings</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bank.html#addaccount" class="tsd-kind-icon">add<wbr>Account</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="bank.html#interestcalculations" class="tsd-kind-icon">interest<wbr>Calculations</a></li>
 							</ul>
 						</section>
 					</div>
@@ -114,13 +122,23 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L6">lib/models/bank.ts:6</a></li>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L11">lib/models/bank.ts:11</a></li>
 								</ul>
 							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a bank instance</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The name of the bank</p>
+										</div>
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="bank.html" class="tsd-signature-type">Bank</a></h4>
@@ -136,7 +154,7 @@
 					<div class="tsd-signature tsd-kind-icon">accounts<span class="tsd-signature-symbol">:</span> <a href="bankaccount.html" class="tsd-signature-type">BankAccount</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = []</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L6">lib/models/bank.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L11">lib/models/bank.ts:11</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -146,7 +164,7 @@
 					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L5">lib/models/bank.ts:5</a></li>
+							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L10">lib/models/bank.ts:10</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -157,28 +175,36 @@
 					<a name="account" class="tsd-anchor"></a>
 					<h3>account</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">account<span class="tsd-signature-symbol">(</span>number<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">account<span class="tsd-signature-symbol">(</span>number<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="bankaccount.html" class="tsd-signature-type">BankAccount</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L17">lib/models/bank.ts:17</a></li>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L28">lib/models/bank.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>permet de récupérer un compte à l’aide du numéro de
-									compte de ce dernier</p>
+									<p>Retrieves an account by its account number</p>
 								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>Error if no account is found with the provided account number</p>
+									</dd>
+								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>number: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The account number of the account to retrieve</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="bankaccount.html" class="tsd-signature-type">BankAccount</a></h4>
+							<p>The bank account with the provided account number</p>
 						</li>
 					</ul>
 				</section>
@@ -186,27 +212,31 @@
 					<a name="accountholdings" class="tsd-anchor"></a>
 					<h3>account<wbr>Holdings</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">account<wbr>Holdings<span class="tsd-signature-symbol">(</span>holder<span class="tsd-signature-symbol">: </span><a href="person.html" class="tsd-signature-type">Person</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+						<li class="tsd-signature tsd-kind-icon">account<wbr>Holdings<span class="tsd-signature-symbol">(</span>person<span class="tsd-signature-symbol">: </span><a href="person.html" class="tsd-signature-type">Person</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L32">lib/models/bank.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L49">lib/models/bank.ts:49</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>permet de connaître la somme des soldes positifs des comptes appartenant au titulaire)</p>
+									<p>Retrieves the sum of all positive balances from the user&#39;s bank accounts.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>holder: <a href="person.html" class="tsd-signature-type">Person</a></h5>
+									<h5>person: <a href="person.html" class="tsd-signature-type">Person</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The person whose account holdings are to be retrieved</p>
+									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<p>The sum of all positive balances of the user&#39;s bank accounts</p>
 						</li>
 					</ul>
 				</section>
@@ -220,20 +250,48 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/bank.ts#L25">lib/models/bank.ts:25</a></li>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L40">lib/models/bank.ts:40</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>permet d’ajouter un compte à la liste des comptes</p>
+									<p>Adds a bank account to the bank</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>account: <a href="bankaccount.html" class="tsd-signature-type">BankAccount</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The bank account to add</p>
+									</div>
 								</li>
 							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="interestcalculations" class="tsd-anchor"></a>
+					<h3>interest<wbr>Calculations</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">interest<wbr>Calculations<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank.ts#L66">lib/models/bank.ts:66</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Calculates bank account interests.
+										For a SavingsAccount the interest rate is 3%.
+										For a CurrentAccount interest brings a gain of 1.5% on the balance if the
+									latter is positive, otherwise a debt of 4%.</p>
+								</div>
+							</div>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
@@ -273,6 +331,9 @@
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="bank.html#addaccount" class="tsd-kind-icon">add<wbr>Account</a>
 							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="bank.html#interestcalculations" class="tsd-kind-icon">interest<wbr>Calculations</a>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -306,6 +367,8 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>

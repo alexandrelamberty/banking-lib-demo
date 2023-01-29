@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>SavingsAccount | @eevos/bank-management-demo</title>
-	<meta name="description" content="Documentation for @eevos/bank-management-demo">
+	<title>SavingsAccount | @eevos/bank-management-library-demo</title>
+	<meta name="description" content="Documentation for @eevos/bank-management-library-demo">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title">@eevos/bank-management-demo</a>
+					<a href="../index.html" class="title">@eevos/bank-management-library-demo</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -66,11 +66,23 @@
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Class representing a SavingsAccount</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel tsd-hierarchy">
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">SavingsAccount</span>
+						<a href="bankaccount.html" class="tsd-signature-type">BankAccount</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">SavingsAccount</span>
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</section>
@@ -81,7 +93,30 @@
 						<section class="tsd-index-section ">
 							<h3>Constructors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="savingsaccount.html#constructor" class="tsd-kind-icon">constructor</a></li>
+								<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="savingsaccount.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-private"><a href="savingsaccount.html#_balance" class="tsd-kind-icon">_balance</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><a href="savingsaccount.html#_lastwithdrawal" class="tsd-kind-icon">_last<wbr>Withdrawal</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="savingsaccount.html#accountnumber" class="tsd-kind-icon">account<wbr>Number</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Accessors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited"><a href="savingsaccount.html#balance" class="tsd-kind-icon">balance</a></li>
+								<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><a href="savingsaccount.html#holder" class="tsd-kind-icon">holder</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class"><a href="savingsaccount.html#lastwithdrawal" class="tsd-kind-icon">last<wbr>Withdrawal</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="savingsaccount.html#deposit" class="tsd-kind-icon">deposit</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="savingsaccount.html#withdrawal" class="tsd-kind-icon">withdrawal</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,20 +124,268 @@
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Constructors</h2>
-				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
-					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Savings<wbr>Account<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="savingsaccount.html" class="tsd-signature-type">SavingsAccount</a></li>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Savings<wbr>Account<span class="tsd-signature-symbol">(</span>accountNumber<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, holder<span class="tsd-signature-symbol">: </span><a href="person.html" class="tsd-signature-type">Person</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="savingsaccount.html" class="tsd-signature-type">SavingsAccount</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#constructor">constructor</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/savings-account.ts#L9">lib/models/savings-account.ts:9</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a new instance of SavingsAccount</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>accountNumber: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The account number</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>holder: <a href="person.html" class="tsd-signature-type">Person</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The account holder</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="savingsaccount.html" class="tsd-signature-type">SavingsAccount</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-private">
+					<a name="_balance" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _balance</h3>
+					<div class="tsd-signature tsd-kind-icon">_balance<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 0</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#_balance">_balance</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L17">lib/models/bank-account.ts:17</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The balance of the bank account.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
+					<a name="_lastwithdrawal" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> _last<wbr>Withdrawal</h3>
+					<div class="tsd-signature tsd-kind-icon">_last<wbr>Withdrawal<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Date</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/savings-account.ts#L9">lib/models/savings-account.ts:9</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="accountnumber" class="tsd-anchor"></a>
+					<h3>account<wbr>Number</h3>
+					<div class="tsd-signature tsd-kind-icon">account<wbr>Number<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#accountnumber">accountNumber</a></p>
+						<ul>
+							<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L11">lib/models/bank-account.ts:11</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The account number of the bank account.</p>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Accessors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+					<a name="balance" class="tsd-anchor"></a>
+					<h3>balance</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> balance<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#balance">balance</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L56">lib/models/bank-account.ts:56</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the balance of the bank account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+							<ul>
+								<li>The balance of the bank account.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+					<a name="holder" class="tsd-anchor"></a>
+					<h3>holder</h3>
+					<ul class="tsd-signatures tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> holder<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="person.html" class="tsd-signature-type">Person</a></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">set</span> holder<span class="tsd-signature-symbol">(</span>person<span class="tsd-signature-symbol">: </span><a href="person.html" class="tsd-signature-type">Person</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#holder">holder</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L48">lib/models/bank-account.ts:48</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the holder of the bank account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <a href="person.html" class="tsd-signature-type">Person</a></h4>
+							<ul>
+								<li>The holder of the bank account.</li>
+							</ul>
+						</li>
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#holder">holder</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L40">lib/models/bank-account.ts:40</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Sets the holder of the bank account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>person: <a href="person.html" class="tsd-signature-type">Person</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The new holder of the bank account.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+							<ul>
+								<li>The holder of the bank account.</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class">
+					<a name="lastwithdrawal" class="tsd-anchor"></a>
+					<h3>last<wbr>Withdrawal</h3>
+					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> lastWithdrawal<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Date</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-demo/blob/6bd5412/src/lib/models/savings-account.ts#L1">lib/models/savings-account.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/savings-account.ts#L24">lib/models/savings-account.ts:24</a></li>
 								</ul>
 							</aside>
-							<h4 class="tsd-returns-title">Returns <a href="savingsaccount.html" class="tsd-signature-type">SavingsAccount</a></h4>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Gets the date of the last withdrawal</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Date</span></h4>
+							<p>The date of the last withdrawal</p>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="deposit" class="tsd-anchor"></a>
+					<h3>deposit</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">deposit<span class="tsd-signature-symbol">(</span>amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="bankaccount.html">BankAccount</a>.<a href="bankaccount.html#deposit">deposit</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/bank-account.ts#L64">lib/models/bank-account.ts:64</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Deposits an amount to the bank account.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The amount to be deposited.</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="withdrawal" class="tsd-anchor"></a>
+					<h3>withdrawal</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">withdrawal<span class="tsd-signature-symbol">(</span>amount<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/alexandrelamberty/bank-management-library-demo/blob/9f7730a/src/lib/models/savings-account.ts#L32">lib/models/savings-account.ts:32</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Perform withdrawal on the account</p>
+								</div>
+								<dl class="tsd-comment-tags">
+									<dt>throws</dt>
+									<dd><p>{Error} If the withdrawal amount is negative or exceeds the authorized limit</p>
+									</dd>
+								</dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>amount: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>The amount to withdraw</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -135,8 +418,32 @@
 					<li class="current tsd-kind-class">
 						<a href="savingsaccount.html" class="tsd-kind-icon">Savings<wbr>Account</a>
 						<ul>
-							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+							<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 								<a href="savingsaccount.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-private">
+								<a href="savingsaccount.html#_balance" class="tsd-kind-icon">_balance</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-private">
+								<a href="savingsaccount.html#_lastwithdrawal" class="tsd-kind-icon">_last<wbr>Withdrawal</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+								<a href="savingsaccount.html#accountnumber" class="tsd-kind-icon">account<wbr>Number</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-inherited">
+								<a href="savingsaccount.html#balance" class="tsd-kind-icon">balance</a>
+							</li>
+							<li class=" tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited">
+								<a href="savingsaccount.html#holder" class="tsd-kind-icon">holder</a>
+							</li>
+							<li class=" tsd-kind-get-signature tsd-parent-kind-class">
+								<a href="savingsaccount.html#lastwithdrawal" class="tsd-kind-icon">last<wbr>Withdrawal</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+								<a href="savingsaccount.html#deposit" class="tsd-kind-icon">deposit</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="savingsaccount.html#withdrawal" class="tsd-kind-icon">withdrawal</a>
 							</li>
 						</ul>
 					</li>
@@ -159,6 +466,8 @@
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
