@@ -48,10 +48,8 @@ In the main project that use the library, link the package library to the projec
 npm link @eevos/bank-management-library-demo
 ```
 
-Using in the library project:
+And use anything that will watch your code.
 
-```shell
-npm run watch:build
-```
+Checkout this post <https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode>
 
-allow the live update of the package in the project that use it.
+This will allow the live update of the package in the project that use it.
