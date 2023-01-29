@@ -3,18 +3,27 @@ import { CurrentAccount } from './current-account';
 import { Person } from './person';
 import { SavingsAccount } from './savings-account';
 
+/**
+ * Class representing a bank
+ */
 export class Bank {
-  test: string;
   name: string;
   accounts: BankAccount[] = [];
 
+  /**
+   * Creates a bank instance
+   * @param name - The name of the bank
+   */
   constructor(name: string) {
     if (!name) throw Error('The name of the bank cannot be empty.');
     this.name = name;
   }
 
   /**
-   * Retrieve an account by his account number
+   * Retrieves an account by its account number
+   * @param number - The account number of the account to retrieve
+   * @returns - The bank account with the provided account number
+   * @throws - Error if no account is found with the provided account number
    */
   account(number: string): BankAccount {
     const bankAccount = this.accounts.find(
@@ -25,14 +34,17 @@ export class Bank {
   }
 
   /**
-   * Add a bank account
+   * Adds a bank account to the bank
+   * @param account - The bank account to add
    */
   addAccount(account: BankAccount): void {
     this.accounts.push(account);
   }
 
   /**
-   * Retrieve the sum of all positive balance from the user bank accounts.
+   * Retrieves the sum of all positive balances from the user's bank accounts.
+   * @param person - The person whose account holdings are to be retrieved
+   * @returns The sum of all positive balances of the user's bank accounts
    */
   accountHoldings(person: Person): number {
     return this.accounts
@@ -45,6 +57,12 @@ export class Bank {
       }, 0);
   }
 
+  /**
+   * Calculates bank account interests.
+   * For a SavingsAccount the interest rate is 3%.
+   * For a CurrentAccount interest brings a gain of 1.5% on the balance if the
+   * latter is positive, otherwise a debt of 4%.
+   */
   interestCalculations(): void {
     this.accounts.forEach((account: BankAccount) => {
       if (account instanceof CurrentAccount) {
