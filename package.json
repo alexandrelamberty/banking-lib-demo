@@ -1,5 +1,5 @@
 {
-  "name": "bank-management-demo",
+  "name": "@eevos/bank-management-demo",
   "version": "1.0.0",
   "description": "Bank Management Demo",
   "main": "build/main/index.js",
