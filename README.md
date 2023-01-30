@@ -75,3 +75,11 @@ And use anything that will watch your code.
 Checkout this post <https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode>
 
 This will allow the live update of the package in the project that use it.
+
+## Tests
+
+Simply run
+
+```shell
+npm run test:unit
+```
