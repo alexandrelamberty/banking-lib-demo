@@ -39,7 +39,7 @@ export class SavingsAccount extends BankAccount {
         this._lastWithdrawal = new Date();
       }
     } else {
-      throw Error('Amount must be positive.');
+      throw Error('Withdrawal amount must be positive.');
     }
   }
 }

@@ -35,3 +35,34 @@ test('create an instance of a CurrentAccount with an incorrect credit line', (t)
     t.is(e.message, 'Credit line amount must be positive.');
   }
 });
+
+test('create an instance of a CurrentAccount with an incorrect deposit', (t) => {
+  const account = new CurrentAccount('000-111', t.context as Person);
+  try {
+    account.deposit(-1);
+  } catch (e: any) {
+    t.is(e.message, 'Deposit amount must be positive.');
+  }
+});
+
+test('create an instance of a CurrentAccount with a correct deposit', (t) => {
+  const account = new CurrentAccount('000-111', t.context as Person);
+  account.deposit(100);
+  t.is(account.balance, 100);
+});
+
+test('create an instance of a CurrentAccount and make a correct withdrawal', (t) => {
+  const account = new CurrentAccount('000-111', t.context as Person);
+  account.deposit(10);
+  account.withdrawal(10);
+  t.is(account.balance, 0);
+});
+
+test('create an instance of a CurrentAccount and make an incorrect withdrawal', (t) => {
+  const account = new CurrentAccount('000-111', t.context as Person);
+  try {
+    account.withdrawal(-1);
+  } catch (e: any) {
+    t.is(e.message, 'Withdrawal amount must be positive.');
+  }
+});
