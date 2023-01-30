@@ -17,7 +17,7 @@ import {
   Bank,
   CurrentAccount,
   Person,
-} from "@eevos/bank-management-demo";
+} from "@eevos/banking-demo";
 
 // Create a Person
 const person = new Person("Doe", "John", new Date("1978-04-12"));
@@ -32,14 +32,14 @@ const bank = new Bank("My Bank");
 bank.addAccount(account);
 ```
 
-Read the docs: <https://alexandrelamberty.github.io/bank-management-library-demo/>
+Read the docs: <https://alexandrelamberty.github.io/banking-lib-demo/>
 
 ## Development
 
 Clone the library and update the dependencies:
 
 ```shell
-git clone https://github.com/alexandrelamberty/bank-management-library-demo 
+git clone https://github.com/alexandrelamberty/banking-lib-demo 
 ```
 
 execute:
@@ -67,7 +67,7 @@ npm link
 In the main project that use the library, link the package library to the project:
 
 ```shell
-npm link @eevos/bank-management-library-demo
+npm link @eevos/banking-lib-demo
 ```
 
 And use anything that will watch your code.
