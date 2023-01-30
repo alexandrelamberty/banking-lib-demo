@@ -2,9 +2,7 @@
 
 TypeScript library package demo for school. This project was created with [typescript-starter](https://github.com/bitjson/typescript-starter)
 
-Read the docs at <https://alexandrelamberty.github.io/bank-management-library-demo/>
-
-See the NPM package repository at <https://www.npmjs.com/package/@eevos/bank-management-library-demo/>
+Read the docs: <https://alexandrelamberty.github.io/bank-management-library-demo/>
 
 ## Usage
 
@@ -20,7 +18,7 @@ Clone the library and update the dependencies:
 git clone https://github.com/alexandrelamberty/bank-management-library-demo 
 ```
 
- execute:
+execute:
 
 ```shell
 npm run watch:build 
