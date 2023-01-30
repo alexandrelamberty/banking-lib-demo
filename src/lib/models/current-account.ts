@@ -10,7 +10,7 @@ export class CurrentAccount extends BankAccount {
    * Credit Line of the account
    * @private
    */
-  private _creaditLine = 0;
+  private _creditLine = 0;
 
   /**
    * Creates an instance of CurrentAccount.
@@ -26,17 +26,17 @@ export class CurrentAccount extends BankAccount {
    * @param  amount - Amount for Credit Line
    * @throws - Credit line amount must be positive
    */
-  public set creaditLine(amount: number) {
+  public set creditLine(amount: number) {
     if (amount <= 0) throw Error('Credit line amount must be positive.');
-    this._creaditLine = amount;
+    this._creditLine = amount;
   }
 
   /**
    * Get Credit Line of the account
    * @returns {number} - Credit Line of the account
    */
-  public get creaditLine(): number {
-    return this._creaditLine;
+  public get creditLine(): number {
+    return this._creditLine;
   }
 
   /**
@@ -49,7 +49,7 @@ export class CurrentAccount extends BankAccount {
     if (amount >= 0) {
       const withdrawalTransaction = this._balance - amount;
       if (withdrawalTransaction < 0) {
-        if (Math.abs(withdrawalTransaction) > this._creaditLine) {
+        if (Math.abs(withdrawalTransaction) > this._creditLine) {
           throw Error('Your withdrawal exceeds the authorized limit.');
         } else {
           this._balance = withdrawalTransaction;

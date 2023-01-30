@@ -24,7 +24,7 @@ const person = new Person("Doe", "John", new Date("1978-04-12"));
 
 // Create a CurrentAccount associated with the person created, set the credit line and make a deposit
 const account = new CurrentAccount("000-111", person);
-account.creaditLine = 20;
+account.creditLine = 20;
 account.deposit(200);
 
 // Create a bank and add the account created
