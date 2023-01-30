@@ -44,6 +44,7 @@ export class Bank {
 
   removeAccount(account: BankAccount): void {
     // FIXME: To be implemented
+    console.log(account);
   }
 
   /**
