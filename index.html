@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>@eevos/bank-management-library-demo</title>
-	<meta name="description" content="Documentation for @eevos/bank-management-library-demo">
+	<title>@eevos/banking-demo</title>
+	<meta name="description" content="Documentation for @eevos/banking-demo">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">@eevos/bank-management-library-demo</a>
+					<a href="index.html" class="title">@eevos/banking-demo</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1>@eevos/bank-management-library-demo</h1>
+			<h1>@eevos/banking-demo</h1>
 		</div>
 	</div>
 </header>
@@ -64,24 +64,43 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#bank-management-library-demo" id="bank-management-library-demo" style="color: inherit; text-decoration: none;">
-					<h1>Bank Management Library Demo</h1>
+				<a href="#banking-library-demo" id="banking-library-demo" style="color: inherit; text-decoration: none;">
+					<h1>Banking Library Demo</h1>
 				</a>
-				<p>TypeScript library demo for school.</p>
-				<p>Read the docs at <a href="https://alexandrelamberty.github.io/bank-management-library-demo/">https://alexandrelamberty.github.io/bank-management-library-demo/</a></p>
-				<p>See the NPM package repository at <a href="https://www.npmjs.com/package/@eevos/bank-management-library-demo/">https://www.npmjs.com/package/@eevos/bank-management-library-demo/</a></p>
+				<p>TypeScript library package demo for school. This project was created with <a href="https://github.com/bitjson/typescript-starter">typescript-starter</a></p>
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h2>Usage</h2>
 				</a>
-				<pre><code class="language-shell">npm i @eevos/bank-management-library-demo
+				<p>Install the library</p>
+				<pre><code class="language-shell">npm i @eevos/banking-demo
 </code></pre>
+				<p>Example of creating a Person, CurrentAccount and Bank class instances.</p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> {
+  Bank,
+  CurrentAccount,
+  Person,
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&quot;@eevos/banking-demo&quot;</span>;
+
+<span class="hljs-comment">// Create a Person</span>
+<span class="hljs-keyword">const</span> person = <span class="hljs-keyword">new</span> Person(<span class="hljs-string">&quot;Doe&quot;</span>, <span class="hljs-string">&quot;John&quot;</span>, <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(<span class="hljs-string">&quot;1978-04-12&quot;</span>));
+
+<span class="hljs-comment">// Create a CurrentAccount associated with the person created, set the credit line and make a deposit</span>
+<span class="hljs-keyword">const</span> account = <span class="hljs-keyword">new</span> CurrentAccount(<span class="hljs-string">&quot;000-111&quot;</span>, person);
+account.creaditLine = <span class="hljs-number">20</span>;
+account.deposit(<span class="hljs-number">200</span>);
+
+<span class="hljs-comment">// Create a bank and add the account created</span>
+<span class="hljs-keyword">const</span> bank = <span class="hljs-keyword">new</span> Bank(<span class="hljs-string">&quot;My Bank&quot;</span>);
+bank.addAccount(account);
+</code></pre>
+				<p>Read the docs: <a href="https://alexandrelamberty.github.io/banking-lib-demo/">https://alexandrelamberty.github.io/banking-lib-demo/</a></p>
 				<a href="#development" id="development" style="color: inherit; text-decoration: none;">
 					<h2>Development</h2>
 				</a>
 				<p>Clone the library and update the dependencies:</p>
-				<pre><code class="language-shell">git clone https://github.com/alexandrelamberty/bank-management-library-demo
+				<pre><code class="language-shell">git clone https://github.com/alexandrelamberty/banking-lib-demo
 </code></pre>
-				<p> execute:</p>
+				<p>execute:</p>
 				<pre><code class="language-shell">npm run watch:build
 </code></pre>
 				<p>and / or</p>
@@ -95,12 +114,11 @@
 				<pre><code class="language-shell">npm link
 </code></pre>
 				<p>In the main project that use the library, link the package library to the project:</p>
-				<pre><code class="language-shell">npm link @eevos/bank-management-library-demo
+				<pre><code class="language-shell">npm link @eevos/banking-lib-demo
 </code></pre>
-				<p>Using in the library project:</p>
-				<pre><code class="language-shell">npm run watch:build
-</code></pre>
-				<p>allow the live update of the package in the project that use it.</p>
+				<p>And use anything that will watch your code.</p>
+				<p>Checkout this post <a href="https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode">https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode</a></p>
+				<p>This will allow the live update of the package in the project that use it.</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
