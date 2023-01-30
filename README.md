@@ -2,13 +2,37 @@
 
 TypeScript library package demo for school. This project was created with [typescript-starter](https://github.com/bitjson/typescript-starter)
 
-Read the docs: <https://alexandrelamberty.github.io/bank-management-library-demo/>
-
 ## Usage
+
+Install the library
 
 ```shell
 npm i @eevos/bank-management-library-demo
 ```
+
+Example of creating a Person, CurrentAccount and Bank class instances.
+
+```ts
+import {
+  Bank,
+  CurrentAccount,
+  Person,
+} from "@eevos/bank-management-demo";
+
+// Create a Person
+const person = new Person("Doe", "John", new Date("1978-04-12"));
+
+// Create a CurrentAccount associated with the person created, set the credit line and make a deposit
+const account = new CurrentAccount("000-111", person);
+account.creaditLine = 20;
+account.deposit(200);
+
+// Create a bank and add the account created
+const bank = new Bank("My Bank");
+bank.addAccount(account);
+```
+
+Read the docs: <https://alexandrelamberty.github.io/bank-management-library-demo/>
 
 ## Development
 
