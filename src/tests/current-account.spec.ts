@@ -1,7 +1,7 @@
 import test from 'ava';
 
-import { CurrentAccount } from './current-account';
-import { Person } from './person';
+import { CurrentAccount } from '../lib/models/current-account';
+import { Person } from '../lib/models/person';
 
 test.before((t) => {
   const person = new Person('Doe', 'John', new Date('1988-05-12'));

@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import { Bank } from './bank';
+import { Bank } from '../lib/models/bank';
 
 test('create an instance of a Bank', (t) => {
   const bank = new Bank('Test bank');
