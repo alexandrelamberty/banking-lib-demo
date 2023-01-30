@@ -1,13 +1,17 @@
 {
   "name": "@eevos/banking-demo",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Banking Library Demo",
   "main": "build/main/index.js",
   "typings": "build/main/index.d.ts",
   "module": "build/module/index.js",
   "repository": "https://github.com/alexandrelamberty/banking-lib-demo",
   "license": "MIT",
-  "keywords": ["demo","school","bank"],
+  "keywords": [
+    "demo",
+    "school",
+    "bank"
+  ],
   "scripts": {
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
