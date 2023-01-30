@@ -42,9 +42,19 @@ export class Bank {
     this.accounts.push(account);
   }
 
+  /**
+   * Remove a bank account to the bank
+   * @param account - The bank account to remove
+   */
   removeAccount(account: BankAccount): void {
-    // FIXME: To be implemented
-    console.log(account);
+    const result = this.accounts.filter(function (acc: BankAccount) {
+      return acc.accountNumber == account.accountNumber;
+    });
+    if (result.length == 0) {
+      throw new Error('Account with this number not found');
+    } else {
+      this.accounts.splice(this.accounts.indexOf(account));
+    }
   }
 
   /**
@@ -71,19 +81,7 @@ export class Bank {
    */
   interestCalculations(): void {
     this.accounts.forEach((account: BankAccount) => {
-      if (account instanceof SavingsAccount) {
-        const interests = (account.balance / 100) * 3;
-        account.deposit(interests);
-      } else if (account instanceof CurrentAccount) {
-        let interests = 0;
-        if (account.balance > -1) {
-          interests = (account.balance / 100) * 1.5;
-          account.deposit(interests);
-        } else {
-          interests = (account.balance / 100) * 4;
-          account.withdrawal(Math.abs(interests));
-        }
-      }
+      account.applyInterests();
     });
   }
 }
