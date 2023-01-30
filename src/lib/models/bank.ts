@@ -65,15 +65,18 @@ export class Bank {
    */
   interestCalculations(): void {
     this.accounts.forEach((account: BankAccount) => {
-      if (account instanceof CurrentAccount) {
-        // add 3% to the balance
-        const interests = 0;
+      if (account instanceof SavingsAccount) {
+        const interests = (account.balance / 100) * 3;
         account.deposit(interests);
-      } else if (account instanceof SavingsAccount) {
-        // add 1.5% if positive
-        // substract 4% if negative
-        const interests = 0;
-        account.deposit(interests);
+      } else if (account instanceof CurrentAccount) {
+        let interests = 0;
+        if (account.balance > -1) {
+          interests = (account.balance / 100) * 1.5;
+          account.deposit(interests);
+        } else {
+          interests = (account.balance / 100) * 4;
+          account.withdrawal(Math.abs(interests));
+        }
       }
     });
   }
