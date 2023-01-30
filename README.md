@@ -83,3 +83,7 @@ Simply run
 ```shell
 npm run test:unit
 ```
+
+Pour ceux qui sont interessé moi j'ai fait de l'exo une librairie.
+Le code source:
+La librairie NPM:
