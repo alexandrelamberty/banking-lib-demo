@@ -12,15 +12,15 @@ export abstract class BankAccount {
 
   /**
    * The balance of the bank account.
-   * @private
+   * @protected
    */
-  _balance = 0;
+  protected _balance = 0;
 
   /**
    * The holder of the bank account.
-   * @private
+   * @protected
    */
-  private _holder: Person;
+  protected _holder: Person;
 
   /**
    * Creates a new instance of the `BankAccount` class.
@@ -65,5 +65,9 @@ export abstract class BankAccount {
   deposit(amount: number): void {
     if (amount < 0) throw Error('Deposit amount must be positive.');
     this._balance = this._balance + amount;
+  }
+
+  applyInterests() {
+    // method implement in child classes
   }
 }
