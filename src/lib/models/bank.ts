@@ -1,7 +1,5 @@
 import { BankAccount } from './bank-account';
-import { CurrentAccount } from './current-account';
 import { Person } from './person';
-import { SavingsAccount } from './savings-account';
 
 /**
  * Class representing a bank
@@ -74,10 +72,7 @@ export class Bank {
   }
 
   /**
-   * Calculates bank account interests.
-   * For a SavingsAccount the interest rate is 3%.
-   * For a CurrentAccount interest brings a gain of 1.5% on the balance if the
-   * latter is positive, otherwise a debt of 4%.
+   * Calculates bank accounts interests.
    */
   interestCalculations(): void {
     this.accounts.forEach((account: BankAccount) => {
