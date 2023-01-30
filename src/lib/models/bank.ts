@@ -38,7 +38,12 @@ export class Bank {
    * @param account - The bank account to add
    */
   addAccount(account: BankAccount): void {
+    // FIXME: Check unique account number
     this.accounts.push(account);
+  }
+
+  removeAccount(account: BankAccount): void {
+    // FIXME: To be implemented
   }
 
   /**
