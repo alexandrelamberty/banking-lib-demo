@@ -67,7 +67,7 @@ npm link
 In the main project that use the library, link the package library to the project:
 
 ```shell
-npm link @eevos/banking-lib-demo
+npm link @eevos/banking-demo
 ```
 
 And use anything that will watch your code.
