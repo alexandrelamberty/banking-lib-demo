@@ -42,4 +42,12 @@ export class SavingsAccount extends BankAccount {
       throw Error('Withdrawal amount must be positive.');
     }
   }
+
+  /**
+   * Calculates bank account interests at a rate of 3%.
+   */
+  applyInterests() {
+    const interests = (this.balance / 100) * 3;
+    this.deposit(interests);
+  }
 }

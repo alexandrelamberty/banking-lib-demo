@@ -61,4 +61,19 @@ export class CurrentAccount extends BankAccount {
       throw Error('Withdrawal amount must be positive.');
     }
   }
+
+  /**
+   * Calculates bank account interest at a rate of 1.5% on the balance if the
+   * latter is positive, otherwise a debt of 4%.
+   */
+  applyInterests() {
+    let interests = 0;
+    if (this.balance > -1) {
+      interests = (this.balance / 100) * 1.5;
+      this.deposit(interests);
+    } else {
+      interests = (this.balance / 100) * 4;
+      this.withdrawal(Math.abs(interests));
+    }
+  }
 }
