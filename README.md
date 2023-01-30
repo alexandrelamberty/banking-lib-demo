@@ -54,11 +54,11 @@ and / or
 npm run watch:test 
 ```
 
-then start implemententing features and adding tests...
+then start implementing features and adding tests...
 
-## Working localy with a project that use the library
+## Working locally with a project that use the library
 
-Link the library localy with:
+Link the library locally with:
 
 ```shell
 npm link
