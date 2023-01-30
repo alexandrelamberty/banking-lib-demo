@@ -1,4 +1,4 @@
-# Bank Management Library Demo
+# Banking Library Demo
 
 TypeScript library package demo for school. This project was created with [typescript-starter](https://github.com/bitjson/typescript-starter)
 
@@ -7,7 +7,7 @@ TypeScript library package demo for school. This project was created with [types
 Install the library
 
 ```shell
-npm i @eevos/bank-management-library-demo
+npm i @eevos/banking-demo
 ```
 
 Example of creating a Person, CurrentAccount and Bank class instances.
