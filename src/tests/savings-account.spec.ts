@@ -11,8 +11,10 @@ test.before((t) => {
 test('create an instance of a SavingsAccount with an incorrect account number', (t) => {
   try {
     new SavingsAccount('', t.context as Person);
-  } catch (e: any) {
-    t.is(e.message, 'Account number cannot be empty.');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'Account number cannot be empty.');
+    }
   }
 });
 
@@ -25,8 +27,10 @@ test('create an instance of a SavingsAccount with an incorrect deposit', (t) => 
   const account = new SavingsAccount('000-111', t.context as Person);
   try {
     account.deposit(-1);
-  } catch (e: any) {
-    t.is(e.message, 'Deposit amount must be positive.');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'Deposit amount must be positive.');
+    }
   }
 });
 
@@ -47,8 +51,10 @@ test('create an instance of a SavingsAccount and make an incorrect withdrawal', 
   const account = new SavingsAccount('000-111', t.context as Person);
   try {
     account.withdrawal(-1);
-  } catch (e: any) {
-    t.is(e.message, 'Withdrawal amount must be positive.');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'Withdrawal amount must be positive.');
+    }
   }
 });
 
@@ -56,7 +62,9 @@ test('create an instance of a SavingsAccount and make a withdrawal that exceed t
   const account = new SavingsAccount('000-111', t.context as Person);
   try {
     account.withdrawal(100);
-  } catch (e: any) {
-    t.is(e.message, 'Your withdrawal exceeds the authorized limit.');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'Your withdrawal exceeds the authorized limit.');
+    }
   }
 });
