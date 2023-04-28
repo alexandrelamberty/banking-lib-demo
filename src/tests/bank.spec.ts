@@ -35,7 +35,7 @@ test('create an instance of a Bank and add an account then remove it', (t) => {
   t.is(bank.accounts.length, 0);
 });
 
-test('create an instance of a Bank with accounts then remove an inexisting account', (t) => {
+test('create an instance of a Bank with accounts then remove an inexistent account', (t) => {
   const person = new Person('Doe', 'John', new Date('1983-12-05'));
   const account = new CurrentAccount('111-221', person);
   const accountNotInTheBank = new CurrentAccount('111-223', person);
@@ -72,6 +72,6 @@ test('create an instance of a Bank with accounts and calculate interests', (t) =
   // Current account 50 + 1,5 %
   t.is(account2.balance, 50.75);
 
-  // Saings account 20 + 3 %
+  // Savings account 20 + 3 %
   t.is(account3.balance, 20.6);
 });
