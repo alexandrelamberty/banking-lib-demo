@@ -86,7 +86,7 @@
 
 <span class="hljs-comment">// Create a CurrentAccount associated with the person created, set the credit line and make a deposit</span>
 <span class="hljs-keyword">const</span> account = <span class="hljs-keyword">new</span> CurrentAccount(<span class="hljs-string">&quot;000-111&quot;</span>, person);
-account.creaditLine = <span class="hljs-number">20</span>;
+account.creditLine = <span class="hljs-number">20</span>;
 account.deposit(<span class="hljs-number">200</span>);
 
 <span class="hljs-comment">// Create a bank and add the account created</span>
@@ -106,19 +106,25 @@ bank.addAccount(account);
 				<p>and / or</p>
 				<pre><code class="language-shell">npm run watch:test
 </code></pre>
-				<p>then start implemententing features and adding tests...</p>
-				<a href="#working-localy-with-a-project-that-use-the-library" id="working-localy-with-a-project-that-use-the-library" style="color: inherit; text-decoration: none;">
-					<h2>Working localy with a project that use the library</h2>
+				<p>then start implementing features and adding tests...</p>
+				<a href="#working-locally-with-a-project-that-use-the-library" id="working-locally-with-a-project-that-use-the-library" style="color: inherit; text-decoration: none;">
+					<h2>Working locally with a project that use the library</h2>
 				</a>
-				<p>Link the library localy with:</p>
+				<p>Link the library locally with:</p>
 				<pre><code class="language-shell">npm link
 </code></pre>
 				<p>In the main project that use the library, link the package library to the project:</p>
-				<pre><code class="language-shell">npm link @eevos/banking-lib-demo
+				<pre><code class="language-shell">npm link @eevos/banking-demo
 </code></pre>
 				<p>And use anything that will watch your code.</p>
 				<p>Checkout this post <a href="https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode">https://devimalplanet.com/how-to-build-and-run-typescript-watch-mode</a></p>
 				<p>This will allow the live update of the package in the project that use it.</p>
+				<a href="#tests" id="tests" style="color: inherit; text-decoration: none;">
+					<h2>Tests</h2>
+				</a>
+				<p>Simply run</p>
+				<pre><code class="language-shell">npm run test:unit
+</code></pre>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -165,6 +171,9 @@ bank.addAccount(account);
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
 				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
 				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
 			</ul>
 			<ul class="tsd-legend">
 				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
