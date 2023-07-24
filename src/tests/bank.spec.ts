@@ -13,8 +13,10 @@ test('create an instance of a Bank with a correct name', (t) => {
 test('create an instance of a Bank with an incorrect name', (t) => {
   try {
     new Bank('');
-  } catch (e: any) {
-    t.is(e.message, 'The name of the bank cannot be empty.');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'The name of the bank cannot be empty.');
+    }
   }
 });
 
@@ -44,8 +46,10 @@ test('create an instance of a Bank with accounts then remove an account non adde
   bank.addAccount(account);
   try {
     bank.removeAccount(accountNotInTheBank);
-  } catch (e: any) {
-    t.is(e.message, 'Account with this number not found');
+  } catch (e: unknown) {
+    if (e instanceof Error) {
+      t.is(e.message, 'Account with this number not found');
+    }
   }
 });
 
