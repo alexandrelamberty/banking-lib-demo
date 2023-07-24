@@ -22,7 +22,7 @@ export class Person {
    * @param dateOfBirth - The person's date of birth
    */
   constructor(lastName: string, firstName: string, dateOfBirth: Date) {
-    // FIXME: initialize in contructor
+    // FIXME: initialize in constructor
     this.lastName = lastName;
     this.firstName = firstName;
     this.dateOfBirth = dateOfBirth;
