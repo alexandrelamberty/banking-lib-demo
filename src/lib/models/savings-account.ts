@@ -6,6 +6,7 @@ import { Person } from './person';
  * @extends BankAccount
  */
 export class SavingsAccount extends BankAccount {
+  INTEREST_RATE_PERCENT = 0.03;
   private _lastWithdrawal: Date;
 
   /**
@@ -24,6 +25,7 @@ export class SavingsAccount extends BankAccount {
   public get lastWithdrawal(): Date {
     return this._lastWithdrawal;
   }
+
   /**
    * Perform withdrawal on the account
    * @param amount - The amount to withdraw
@@ -47,7 +49,7 @@ export class SavingsAccount extends BankAccount {
    * Calculates bank account interests at a rate of 3%.
    */
   applyInterests() {
-    const interests = (this.balance / 100) * 3;
+    const interests = this.balance * this.INTEREST_RATE_PERCENT;
     this.deposit(interests);
   }
 }

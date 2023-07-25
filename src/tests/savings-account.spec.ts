@@ -1,5 +1,4 @@
 import test from 'ava';
-
 import { Person } from '../lib/models/person';
 import { SavingsAccount } from '../lib/models/savings-account';
 
@@ -34,7 +33,7 @@ test('create an instance of a SavingsAccount with an incorrect deposit', (t) => 
   }
 });
 
-test('create an instance of a SavingsAccount with a correct deposit', (t) => {
+test('create an instance of a SavingsAccount with a correct deposit a withdrawal ', (t) => {
   const account = new SavingsAccount('000-111', t.context as Person);
   account.deposit(100);
   t.is(account.balance, 100);

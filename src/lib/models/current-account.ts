@@ -6,6 +6,9 @@ import { Person } from './person';
  * @extends BankAccount
  */
 export class CurrentAccount extends BankAccount {
+  POSITIVE_BALANCE_INTEREST_RATE_PERCENT = 0.015;
+  NEGATIVE_BALANCE_INTEREST_RATE_PERCENT = 0.04;
+
   /**
    * Credit Line of the account
    * @private
@@ -69,10 +72,10 @@ export class CurrentAccount extends BankAccount {
   applyInterests() {
     let interests = 0;
     if (this.balance > -1) {
-      interests = (this.balance / 100) * 1.5;
+      interests = this.balance * this.POSITIVE_BALANCE_INTEREST_RATE_PERCENT;
       this.deposit(interests);
     } else {
-      interests = (this.balance / 100) * 4;
+      interests = this.balance * this.NEGATIVE_BALANCE_INTEREST_RATE_PERCENT;
       this.withdrawal(Math.abs(interests));
     }
   }
