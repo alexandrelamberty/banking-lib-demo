@@ -1,4 +1,4 @@
-# Banking Library Demo
+# Banking Management Library Demo
 
 TypeScript library package demo for school. This project was created with [typescript-starter](https://github.com/bitjson/typescript-starter)
 
