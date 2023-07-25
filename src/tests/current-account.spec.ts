@@ -9,13 +9,12 @@ test.before((t) => {
 });
 
 test('create an instance of a CurrentAccount with an incorrect account number', (t) => {
-  try {
-    new CurrentAccount('', t.context as Person);
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'Account number cannot be empty.');
-    }
-  }
+  t.throws(
+    () => {
+      new CurrentAccount('', t.context as Person);
+    },
+    { instanceOf: Error, message: 'Account number cannot be empty.' }
+  );
 });
 
 test('create an instance of a CurrentAccount with the correct account number', (t) => {
@@ -31,24 +30,22 @@ test('create an instance of a CurrentAccount with a correct credit line', (t) =>
 
 test('create an instance of a CurrentAccount with an incorrect credit line', (t) => {
   const account = new CurrentAccount('000-111', t.context as Person);
-  try {
-    account.creditLine = -1;
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'Credit line amount must be positive.');
-    }
-  }
+  t.throws(
+    () => {
+      account.creditLine = -1;
+    },
+    { instanceOf: Error, message: 'Credit line amount must be positive.' }
+  );
 });
 
 test('create an instance of a CurrentAccount with an incorrect deposit', (t) => {
   const account = new CurrentAccount('000-111', t.context as Person);
-  try {
-    account.deposit(-1);
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'Deposit amount must be positive.');
-    }
-  }
+  t.throws(
+    () => {
+      account.deposit(-1);
+    },
+    { instanceOf: Error, message: 'Deposit amount must be positive.' }
+  );
 });
 
 test('create an instance of a CurrentAccount with a correct deposit', (t) => {
@@ -66,11 +63,10 @@ test('create an instance of a CurrentAccount and make a correct withdrawal', (t)
 
 test('create an instance of a CurrentAccount and make an incorrect withdrawal', (t) => {
   const account = new CurrentAccount('000-111', t.context as Person);
-  try {
-    account.withdrawal(-1);
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'Withdrawal amount must be positive.');
-    }
-  }
+  t.throws(
+    () => {
+      account.withdrawal(-1);
+    },
+    { instanceOf: Error, message: 'Withdrawal amount must be positive.' }
+  );
 });

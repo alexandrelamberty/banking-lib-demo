@@ -11,17 +11,24 @@ test('create an instance of a Bank with a correct name', (t) => {
 });
 
 test('create an instance of a Bank with an incorrect name', (t) => {
-  try {
-    new Bank('');
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'The name of the bank cannot be empty.');
-    }
-  }
+  t.throws(
+    () => {
+      new Bank('');
+    },
+    { instanceOf: Error, message: 'The name of the bank cannot be empty.' }
+  );
+
+  // try {
+  //   new Bank('');
+  // } catch (e: unknown) {
+  //   if (e instanceof Error) {
+  //     t.is(e.message, 'The name of the bank cannot be empty.');
+  //   }
+  // }
 });
 
 test('create an instance of a Bank and add an account', (t) => {
-  const person = new Person('Doe', 'John', new Date('1983-12-05'));
+  const person: any = {}; //new Person('Doe', 'John', new Date('1983-12-05'));
   const account = new CurrentAccount('111-221', person);
   const bank = new Bank('Test bank');
   bank.addAccount(account);
@@ -43,13 +50,12 @@ test('create an instance of a Bank with accounts then remove an inexistent accou
   const accountNotInTheBank = new CurrentAccount('111-223', person);
   const bank = new Bank('Test bank');
   bank.addAccount(account);
-  try {
-    bank.removeAccount(accountNotInTheBank);
-  } catch (e: unknown) {
-    if (e instanceof Error) {
-      t.is(e.message, 'Account with this number not found');
-    }
-  }
+  t.throws(
+    () => {
+      bank.removeAccount(accountNotInTheBank);
+    },
+    { instanceOf: Error, message: 'Account with this number not found' }
+  );
 });
 
 test('create an instance of a Bank with accounts and calculate interests', (t) => {
