@@ -28,7 +28,7 @@ test('create an instance of a Bank with an incorrect name', (t) => {
 });
 
 test('create an instance of a Bank and add an account', (t) => {
-  const person: any = {}; //new Person('Doe', 'John', new Date('1983-12-05'));
+  const person: Person = new Person('Doe', 'John', new Date('1983-12-05'));
   const account = new CurrentAccount('111-221', person);
   const bank = new Bank('Test bank');
   bank.addAccount(account);
