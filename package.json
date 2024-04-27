@@ -1,6 +1,6 @@
 {
   "name": "@alexandrelamberty/banking-lib-demo",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "description": "Banking Library Demo",
   "author": "Alexandre Lamberty <mail@alexandrelamberty.com> (https://alexandrelamberty.com/)",
   "license": "MIT",
@@ -9,7 +9,7 @@
     "url": "git+https://github.com/alexandrelamberty/banking-lib-demo.git"
   },
   "publishConfig": {
-    "@eevos:registry": "https://npm.pkg.github.com"
+    "@alexandrelamberty:registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "demo",

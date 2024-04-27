@@ -14,6 +14,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://registry.npmjs.org'
+          scope: '@eevos'
       - name: Install modules
         run: npm install
       - name: Build
@@ -27,7 +28,7 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@eevos'
+          scope: '@alexandrelamberty'
       - name: Publish to GitHub Packages
         run: npm publish
         env:
