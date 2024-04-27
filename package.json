@@ -1,10 +1,13 @@
 {
   "name": "@eevos/banking-demo",
-  "version": "0.1.9",
+  "version": "0.2.4",
   "description": "Banking Library Demo",
   "author": "Alexandre Lamberty <mail@alexandrelamberty.com> (https://alexandrelamberty.com/)",
   "license": "MIT",
-  "repository": "https://github.com/alexandrelamberty/banking-lib-demo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrelamberty/banking-lib-demo.git"
+  },
   "keywords": [
     "demo",
     "lib",
