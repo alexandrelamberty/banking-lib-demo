@@ -10,7 +10,7 @@
   },
   "publishConfig": {
     "@eevos:registry": "https://npm.pkg.github.com"
-  }
+  },
   "keywords": [
     "demo",
     "lib",
