@@ -28,7 +28,6 @@ jobs:
         with:
           node-version: '18.x'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@eevos'
       - name: Publish to GitHub Packages
         run: npm publish
         env:
