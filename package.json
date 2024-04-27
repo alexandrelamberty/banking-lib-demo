@@ -1,15 +1,12 @@
 {
   "name": "@alexandrelamberty/banking-lib-demo",
-  "version": "0.2.9",
+  "version": "0.3.0",
   "description": "Banking Library Demo",
   "author": "Alexandre Lamberty <mail@alexandrelamberty.com> (https://alexandrelamberty.com/)",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexandrelamberty/banking-lib-demo.git"
-  },
-  "publishConfig": {
-    "@alexandrelamberty:registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "demo",
