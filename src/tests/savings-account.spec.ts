@@ -1,4 +1,5 @@
 import test from 'ava';
+
 import { Person } from '../lib/models/person';
 import { SavingsAccount } from '../lib/models/savings-account';
 
